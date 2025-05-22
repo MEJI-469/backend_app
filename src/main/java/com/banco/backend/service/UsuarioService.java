@@ -134,6 +134,18 @@ public class UsuarioService {
         dto.setSaldoDisponible(usuario.getSaldoDisponiblePlano());
         return dto;
     }
+    
+    public boolean validarRespuestaPorTexto(Long usuarioId, String textoPregunta, String respuestaIngresada) {
+        Usuario usuario = usuarioRepository.findById(usuarioId).orElse(null);
+        if (usuario == null) return false;
+
+        List<Respuesta> respuestas = respuestaRepository.findByUsuario(usuario);
+        return respuestas.stream().anyMatch(respuesta ->
+                respuesta.getPregunta().getTextoPlano().equalsIgnoreCase(textoPregunta.trim()) &&
+                respuesta.getRespuesta().equalsIgnoreCase(respuestaIngresada.trim())
+        );
+    }
+
 
 
 

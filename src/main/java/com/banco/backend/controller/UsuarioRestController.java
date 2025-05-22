@@ -4,6 +4,7 @@ import com.banco.backend.dto.UsuarioCuentaResponse;
 import com.banco.backend.dto.UsuarioDetalleResponse;
 import com.banco.backend.dto.UsuarioRegistroRequest;
 import com.banco.backend.model.Pregunta;
+import com.banco.backend.model.Respuesta;
 import com.banco.backend.model.Usuario;
 import com.banco.backend.service.PreguntaService;
 import com.banco.backend.service.UsuarioService;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api/usuario")
 public class UsuarioRestController {
@@ -62,6 +64,18 @@ public class UsuarioRestController {
                 ResponseEntity.ok("Respuesta correcta") :
                 ResponseEntity.status(403).body("Respuesta incorrecta");
     }
+    
+ // ✅ Validar respuesta por texto de la pregunta
+    @PostMapping("/validar-respuesta-texto")
+    public ResponseEntity<String> validarRespuestaPorTexto(@RequestParam Long usuarioId,
+                                                           @RequestParam String textoPregunta,
+                                                           @RequestParam String respuestaIngresada) {
+        boolean valida = usuarioService.validarRespuestaPorTexto(usuarioId, textoPregunta, respuestaIngresada);
+        return valida ?
+                ResponseEntity.ok("Respuesta correcta") :
+                ResponseEntity.status(403).body("Respuesta incorrecta");
+    }
+
 
     // ✅ 3. Validar imagen
     @PostMapping("/validar-imagen")
