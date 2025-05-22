@@ -1,5 +1,6 @@
 package com.banco.backend.controller;
 
+import com.banco.backend.dto.UsuarioCuentaResponse;
 import com.banco.backend.dto.UsuarioDetalleResponse;
 import com.banco.backend.dto.UsuarioRegistroRequest;
 import com.banco.backend.model.Pregunta;
@@ -92,6 +93,15 @@ public class UsuarioRestController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(detalle);
+    }
+    
+    @GetMapping("/{id}/cuenta")
+    public ResponseEntity<?> obtenerCuenta(@PathVariable Long id) {
+        UsuarioCuentaResponse cuenta = usuarioService.obtenerInfoCuenta(id);
+        if (cuenta == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(cuenta);
     }
 
 

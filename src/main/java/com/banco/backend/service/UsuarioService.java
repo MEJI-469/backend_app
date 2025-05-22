@@ -1,5 +1,6 @@
 package com.banco.backend.service;
 
+import com.banco.backend.dto.UsuarioCuentaResponse;
 import com.banco.backend.dto.UsuarioDetalleResponse;
 import com.banco.backend.model.*;
 import com.banco.backend.repository.*;
@@ -89,13 +90,14 @@ public class UsuarioService {
         return usuarioRepository.findByUsername(username).orElse(null);
     }
     
-    public Usuario autenticar(String username, String passwordPlano) {
-        Usuario usuario = usuarioRepository.findByUsername(username).orElse(null);
-        if (usuario != null && usuario.getPasswordPlano().equals(passwordPlano)) {
-            return usuario;
-        }
-        return null;
+    public Usuario autenticar(String usernamePlano, String passwordPlano) {
+        return usuarioRepository.findAll().stream()
+            .filter(u -> u.getUsernamePlano().equals(usernamePlano)
+                      && u.getPasswordPlano().equals(passwordPlano))
+            .findFirst()
+            .orElse(null);
     }
+
     
     public UsuarioDetalleResponse obtenerDetalleUsuario(Long idUsuario) {
         Usuario usuario = usuarioRepository.findById(idUsuario).orElse(null);
@@ -120,6 +122,19 @@ public class UsuarioService {
 
         return response;
     }
+    
+    public UsuarioCuentaResponse obtenerInfoCuenta(Long idUsuario) {
+        Usuario usuario = usuarioRepository.findById(idUsuario).orElse(null);
+        if (usuario == null) return null;
+
+        UsuarioCuentaResponse dto = new UsuarioCuentaResponse();
+        dto.setTipoCliente(usuario.getTipoClientePlano());
+        dto.setTipoCuenta(usuario.getTipoCuentaPlano());
+        dto.setNumeroCuenta(usuario.getNumeroCuentaPlano());
+        dto.setSaldoDisponible(usuario.getSaldoDisponiblePlano());
+        return dto;
+    }
+
 
 
 }

@@ -19,6 +19,18 @@ public class Usuario {
 
     @Column(nullable = false)
     private String password;
+    
+    @Column(name = "tipo_cliente")
+    private String tipoCliente;
+
+    @Column(name = "tipo_cuenta")
+    private String tipoCuenta;
+
+    @Column(name = "numero_cuenta")
+    private String numeroCuenta;
+
+    @Column(name = "saldo_disponible")
+    private String saldoDisponible;
 
     // Relación uno-a-muchos: un usuario tiene 5 respuestas
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -44,16 +56,52 @@ public class Usuario {
     public String getPasswordPlano() {
         return AesEncryptor.decrypt(this.password);
     }
+    
+    public void setTipoClientePlano(String tipoClientePlano) {
+        this.tipoCliente = AesEncryptor.encrypt(tipoClientePlano);
+    }
+
+    public String getTipoClientePlano() {
+        return AesEncryptor.decrypt(this.tipoCliente);
+    }
+
+    public void setTipoCuentaPlano(String tipoCuentaPlano) {
+        this.tipoCuenta = AesEncryptor.encrypt(tipoCuentaPlano);
+    }
+
+    public String getTipoCuentaPlano() {
+        return AesEncryptor.decrypt(this.tipoCuenta);
+    }
+
+    public void setNumeroCuentaPlano(String numeroCuentaPlano) {
+        this.numeroCuenta = AesEncryptor.encrypt(numeroCuentaPlano);
+    }
+
+    public String getNumeroCuentaPlano() {
+        return AesEncryptor.decrypt(this.numeroCuenta);
+    }
+
+    public void setSaldoDisponiblePlano(String saldoPlano) {
+        this.saldoDisponible = AesEncryptor.encrypt(saldoPlano);
+    }
+
+    public String getSaldoDisponiblePlano() {
+        return AesEncryptor.decrypt(this.saldoDisponible);
+    }
 
     // Getters, setters y constructores...
     public Usuario() {}
-
-	public Usuario(Long id, String username, String password, List<Respuesta> respuestas,
-			ImagenSeguridad imagenSeguridad) {
+    
+	public Usuario(Long id, String username, String password, String tipoCliente, String tipoCuenta,
+			String numeroCuenta, String saldoDisponible, List<Respuesta> respuestas, ImagenSeguridad imagenSeguridad) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
+		this.tipoCliente = tipoCliente;
+		this.tipoCuenta = tipoCuenta;
+		this.numeroCuenta = numeroCuenta;
+		this.saldoDisponible = saldoDisponible;
 		this.respuestas = respuestas;
 		this.imagenSeguridad = imagenSeguridad;
 	}
@@ -98,4 +146,36 @@ public class Usuario {
 		this.imagenSeguridad = imagenSeguridad;
 	}
 
+	public String getTipoCliente() {
+		return tipoCliente;
+	}
+
+	public void setTipoCliente(String tipoCliente) {
+		this.tipoCliente = tipoCliente;
+	}
+
+	public String getTipoCuenta() {
+		return tipoCuenta;
+	}
+
+	public void setTipoCuenta(String tipoCuenta) {
+		this.tipoCuenta = tipoCuenta;
+	}
+
+	public String getNumeroCuenta() {
+		return numeroCuenta;
+	}
+
+	public void setNumeroCuenta(String numeroCuenta) {
+		this.numeroCuenta = numeroCuenta;
+	}
+
+	public String getSaldoDisponible() {
+		return saldoDisponible;
+	}
+
+	public void setSaldoDisponible(String saldoDisponible) {
+		this.saldoDisponible = saldoDisponible;
+	}
+	
 }

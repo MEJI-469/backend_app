@@ -28,12 +28,12 @@ INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (4, 'P7LDQHYUe8vNOkn90
 INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (5, 'gSBAu5zo87iFieF2p/Eb2w=='); -- huella.png
 INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (6, '0SaA9WmRVk8lme6yNDnuFQ=='); -- img.png
 
--- Usuarios (username y password encriptados con AES)
-INSERT INTO usuarios (id, username, password, imagen_id) VALUES (1, 'NrzvXXJ9iWYn0LtzIeK7DQ==', 'nnk5VT5ZD/VQbVbqLHwIRg==', 1); -- usuario1 / clave1
-INSERT INTO usuarios (id, username, password, imagen_id) VALUES (2, 'PGTbTS6QKdsvqq9hBxIk+w==', 'iMy5c5ywYB4amOC25mZDPA==', 2); -- usuario2 / clave2
-INSERT INTO usuarios (id, username, password, imagen_id) VALUES (3, 'CvUv3O+fK4TsbocfuMXFew==', 'a5So66gkqGyahECIb9B05w==', 3); -- usuario3 / clave3
-INSERT INTO usuarios (id, username, password, imagen_id) VALUES (4, 'ut5FYYa02ZAHwUFAoBnz4g==', 's7ZURLzayNh0Q8svmO9YCQ==', 4); -- usuario4 / clave4
-INSERT INTO usuarios (id, username, password, imagen_id) VALUES (5, 'TYKLf/X6+D0nPx1XxKtZxw==', 'BV1EVvSdZMk5CNGWa/8HIA==', 5); -- usuario5 / clave5
+-- Usuarios con username, password y datos de cuenta cifrados con AES
+INSERT INTO usuarios (id, username, password, imagen_id, tipo_cliente, tipo_cuenta, numero_cuenta, saldo_disponible) VALUES (1, 'NrzvXXJ9iWYn0LtzIeK7DQ==', 'nnk5VT5ZD/VQbVbqLHwIRg==', 1, 'sMoGb5A1ClIBdWd3cIV1cg==', 'ArIc1ZV3dEjwgj4qB+OZgw==', 'KDrfcaxKbhwIg9cKIzP+mw==', 'dC28EH+4Ke6KiNxIoYZKqQ=='); -- TITULAR / CUENTA ACTIVA / 2901788669 / 40.72
+INSERT INTO usuarios (id, username, password, imagen_id, tipo_cliente, tipo_cuenta, numero_cuenta, saldo_disponible) VALUES (2, 'PGTbTS6QKdsvqq9hBxIk+w==', 'iMy5c5ywYB4amOC25mZDPA==', 2, 'sMoGb5A1ClIBdWd3cIV1cg==', 'ArIc1ZV3dEjwgj4qB+OZgw==', 'oCQsP4cBC+aKUSsaonCbxA==', 'YXq5OwQ08jX3E2pyPycwYw=='); -- TITULAR / CUENTA ACTIVA / 2901788670 / 125.50
+INSERT INTO usuarios (id, username, password, imagen_id, tipo_cliente, tipo_cuenta, numero_cuenta, saldo_disponible) VALUES (3, 'CvUv3O+fK4TsbocfuMXFew==', 'a5So66gkqGyahECIb9B05w==', 3, 'sMoGb5A1ClIBdWd3cIV1cg==', 'wipzYPPD61uzlfaX2tZS5g==', 'T6xaTCLtuThQMPztEUhdSA==', 'CP6GwSHnu6ru4427TLk3oA=='); -- TITULAR / CUENTA PASIVA / 2901788671 / 999.99
+INSERT INTO usuarios (id, username, password, imagen_id, tipo_cliente, tipo_cuenta, numero_cuenta, saldo_disponible) VALUES (4, 'ut5FYYa02ZAHwUFAoBnz4g==', 's7ZURLzayNh0Q8svmO9YCQ==', 4, 'zAOJW4Y5qJY6dzhs19A6KA==', 'ArIc1ZV3dEjwgj4qB+OZgw==', 'Yk/RKNEqCJ3mKQvJt5P8bg==', 'FPuU3GVmHdBa2TEq5IvJIg=='); -- BENEFICIARIO / CUENTA ACTIVA / 2901788672 / 12.30
+INSERT INTO usuarios (id, username, password, imagen_id, tipo_cliente, tipo_cuenta, numero_cuenta, saldo_disponible) VALUES (5, 'TYKLf/X6+D0nPx1XxKtZxw==', 'BV1EVvSdZMk5CNGWa/8HIA==', 5, 'sMoGb5A1ClIBdWd3cIV1cg==', 'iv3YT9k9V3g+5YBQDhdMsmCjxmKWPpzKnEKGy3vkZNE=', 'r5/0Z/PjMxp7mBDp/WwyiA==', 'JDHi1T+rnJ9ynLMxUiDgiw=='); -- TITULAR / CUENTA DE AHORROS / 2901788673 / 500.00
 
 -- Respuestas
 -- Respuestas para usuario 1
