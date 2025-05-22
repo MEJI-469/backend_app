@@ -21,12 +21,16 @@ INSERT INTO preguntas (id, texto) VALUES (19, 'xliR5kIQruSnBE4QSUc8qUQzHopWHRGC3
 INSERT INTO preguntas (id, texto) VALUES (20, 't4209ft/O745S7d3uGCFf25YDnuCE6a6KkaD9lsi8LA='); -- ¿Pregunta N° 20?
 
 -- Imágenes de seguridad (AES encriptadas)
-INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (1, '9DjmM4sdO2B2qmMNm6AKaA=='); -- candado.png
-INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (2, 'goBNmUrjSx632YC+lGqR1g=='); -- estrella.png
-INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (3, 'nzTGzZTESbTBJlSDUboMPQ=='); -- llave.png
-INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (4, 'P7LDQHYUe8vNOkn90p9QYg=='); -- escudo.png
-INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (5, 'gSBAu5zo87iFieF2p/Eb2w=='); -- huella.png
-INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (6, '0SaA9WmRVk8lme6yNDnuFQ=='); -- img.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (1, '0IwSb1/+yS+rLfV4zL9tUQ=='); -- avion.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (2, 'oafpqiFOHPznq/r1UYvKxA=='); -- balon.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (3, 'Cnt0I3DjutT3kI1ZtAGpnw=='); -- basurero.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (4, '3EY921cvqhW/g4IQhinINQ=='); -- corazon.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (5, 'medyuH9PqaEsHtocDpBGVQ=='); -- faro.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (6, 'nzTGzZTESbTBJlSDUboMPQ=='); -- llave.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (7, 'yFpxi4MyQYsSCvTNHPxBtA=='); -- mariposa.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (8, 'BDhidN163izeKfYZeJwQ6Q=='); -- microfono.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (9, '9gSrvIdsCQ+GVIdEtKwF9A=='); -- microscopio.png
+INSERT INTO imagenes_seguridad (id, nombre_imagen) VALUES (10, 'AMLueTZBhe0fYx1e2K3QXA=='); -- paloma.png
 
 -- Usuarios con username, password y datos de cuenta cifrados con AES
 INSERT INTO usuarios (id, username, password, imagen_id, tipo_cliente, tipo_cuenta, numero_cuenta, saldo_disponible) VALUES (1, 'NrzvXXJ9iWYn0LtzIeK7DQ==', 'nnk5VT5ZD/VQbVbqLHwIRg==', 1, 'sMoGb5A1ClIBdWd3cIV1cg==', 'ArIc1ZV3dEjwgj4qB+OZgw==', 'KDrfcaxKbhwIg9cKIzP+mw==', 'dC28EH+4Ke6KiNxIoYZKqQ=='); -- TITULAR / CUENTA ACTIVA / 2901788669 / 40.72
@@ -44,30 +48,30 @@ INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUE
 INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (5, 1, 5, 'wo7HTKi0ltAhGKAZGTGfpQ=='); -- respuesta5_u1
 
 -- usuario 2
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (6, 2, 6, '0RnOIsqjEtKvHZZE+ON3sQ=='); -- respuesta1_u2
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (7, 2, 7, '5fLzR5zFHoRg0Mc5m5QOZg=='); -- respuesta2_u2
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (8, 2, 8, '9s1mcQuopPaHt4ip/YKMrg=='); -- respuesta3_u2
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (9, 2, 9, '77Y33MXsQm9ihFSl2H92xQ=='); -- respuesta4_u2
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (10, 2, 10, '7WTOsUYGoRTzrUGaXDdXow=='); -- respuesta5_u2
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (6, 2, 6, '0/e6flJjYCIxA7ziY4pYVA=='); -- respuesta1_u2
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (7, 2, 7, 'h+XO24O/wz11A/5cmHgFmA=='); -- respuesta2_u2
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (8, 2, 8, 'j/HMqycbuqprbZw/LfDU0w=='); -- respuesta3_u2
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (9, 2, 9, 'chd1TrdhYpt9dOjv2BwHxw=='); -- respuesta4_u2
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (10, 2, 10, 'LT4olwY+ajNPzrFPPaShOw=='); -- respuesta5_u2
 
 -- usuario 3
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (11, 3, 11, 'qdE2N9V6EZJfS6qCe79dpQ=='); -- respuesta1_u3
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (12, 3, 12, 'ZRiOU3Ej1yRn6pe7b6Rz3g=='); -- respuesta2_u3
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (13, 3, 13, '1y0z+9OVWKrMBkFgrHe1ew=='); -- respuesta3_u3
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (14, 3, 14, 'xq5fWFaFQZMPgaJJPcZD/A=='); -- respuesta4_u3
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (15, 3, 15, 'XjG3PDYmQQR4MoNv6iV6ew=='); -- respuesta5_u3
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (11, 3, 11, 'mGjDB73qisnHTqy0Dq73JA=='); -- respuesta1_u3
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (12, 3, 12, 'wQE8szpGiZTmdOpTYZq47A=='); -- respuesta2_u3
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (13, 3, 13, '5O10jSIcwedCM7DlsRucYw=='); -- respuesta3_u3
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (14, 3, 14, 'wVYaIh8sVFArR6UsNtVtLg=='); -- respuesta4_u3
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (15, 3, 15, 'gfDFaUPdRlmZNHnRBykNfQ=='); -- respuesta5_u3
 
 -- usuario 4
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (16, 4, 16, 'gq7X74c1Tb2zY9OzXWWNQg=='); -- respuesta1_u4
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (17, 4, 17, 'Mn4gtK2PTNhRpDxjlEMk5g=='); -- respuesta2_u4
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (18, 4, 18, 'z1SkTvJDv6qzqVqgzNcIfA=='); -- respuesta3_u4
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (19, 4, 19, 'br6lbVnnfn4CeCNMg7OKAg=='); -- respuesta4_u4
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (20, 4, 20, 'WDRQNLPRnM9V6nEj/OBy4w=='); -- respuesta5_u4
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (16, 4, 16, 'tfffLDHIEs7Vajb6MoxjlA=='); -- respuesta1_u4
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (17, 4, 17, 'PPNtai2y21CyShtylhx4iA=='); -- respuesta2_u4
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (18, 4, 18, 'fF9tWG9fGfrUv/4b2b4RvA=='); -- respuesta3_u4
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (19, 4, 19, 'OoHEyw9nUyWjWUAviHRWtA=='); -- respuesta4_u4
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (20, 4, 20, 'Aj4vECixdybg1J84epffPw=='); -- respuesta5_u4
 
 -- usuario 5
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (21, 5, 1, 'VikzOaIEI7VuKcA5JooW5A=='); -- respuesta1_u5
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (22, 5, 2, 'NCEdy47z64YBPNyf2XyEmA=='); -- respuesta2_u5
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (23, 5, 3, 'TWuOBFYOkBskVPmms2sriA=='); -- respuesta3_u5
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (24, 5, 4, 'dU2sTI8/0d7Q7hGMFG3EkQ=='); -- respuesta4_u5
-INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (25, 5, 5, 'Gi7uDM7OR5AbUl+x7AXkAg=='); -- respuesta5_u5
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (21, 5, 1, 'MzXMjep4GVlrjOsZd6nO2g=='); -- respuesta1_u5
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (22, 5, 2, 'B2kbkDkAyVT/ajnMh8XBng=='); -- respuesta2_u5
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (23, 5, 3, 'h0kLb0t5ZUn2YbPWs3DDlg=='); -- respuesta3_u5
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (24, 5, 4, 'GBzDCYaBZFXwErCw4XQcrg=='); -- respuesta4_u5
+INSERT INTO respuestas (id, usuario_id, pregunta_id, respuesta_encriptada) VALUES (25, 5, 5, 'ujrcBSpZR8HEGlCShLph9A=='); -- respuesta5_u5
 
